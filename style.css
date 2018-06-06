@@ -8,9 +8,11 @@ html,body{
     height: 100%;
 }
 #text{
-    width: 500px;
+    width: 530px;
     font-size: 20px;
     margin: auto;
     box-shadow: 0 3px 8px 0 #00000038;
     padding: 20px;
+    white-space: pre-wrap;
+    text-align: left;
 }

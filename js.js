@@ -16,7 +16,7 @@ while ( age<= 0 || age > 120 || isNaN(age)){
 }
 var gender = confirm("Ваш пол мужской?")? "мужской" : "женский";
 var retiree = (age > 60)? "да" : "нет";
-var result = " Ваше фамилия, имя, отчество: " + secondName + " " + firstName + " " + patronymic + ";  Ваш возраст в годах: " + age + ";   Ваш возраст в днях: " + (age*365) + ";   Через 5 лет вам будет: " + (age + 5) +  ";   Ваш пол: " + gender + ";  Вы на пенсии: " + retiree + "; ";
+var result = " Ваше фамилия, имя, отчество: " + secondName + " " + firstName + " " + patronymic + ";\n Ваш возраст в годах: " + age + ";\n Ваш возраст в днях: " + (age*365) + ";\n Через 5 лет вам будет: " + (age + 5) +  ";\n Ваш пол: " + gender + ";\n Вы на пенсии: " + retiree + "; ";
 document.getElementById("text").textContent = result;
 
 
