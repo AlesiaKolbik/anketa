@@ -1,6 +1,6 @@
 'use strict';
 
-const readline = require('readline');
+
 
 const result = {
     firstName:'',
@@ -13,9 +13,9 @@ const result = {
 askSecondName();
 function askSecondName() {
     const rl = prompt();
-    rl.question('Введите вашу фамилию:', (answer) =>{
+    rl.question('Введите Вашу фамилию:', (answer) =>{
         rl.close();
-        if(!answer){
+        if(!answer || answer === " "){
             console.log('Вы ничего не ввели.Повторите ввод:');
             askSecondName();
         }
@@ -29,7 +29,7 @@ function askName() {
     const rl = prompt();
     rl.question('Введите Ваше имя: ', (answer) => {
         rl.close();
-        if (!answer) {
+        if (!answer || answer === " ") {
             console.log('Имя не может быть пустым.');
             askName();
         }
@@ -44,7 +44,7 @@ function askPatronymic() {
     const rl = prompt();
     rl.question('Введите Ваше отчество:', (answer) =>{
         rl.close();
-        if(!answer){
+        if(!answer || answer === " "){
             console.log('Вы ничего не ввели. Повторите ввод:');
             askPatronymic();
         }
@@ -83,13 +83,14 @@ function askGender() {
             end();
         }
         else {
-          console.log('Вы ввели пол не корректно. Введите м или ж:');
+          console.log('Вы ввели пол некорректно. Введите м или ж:');
           askGender();
         }
     });
 }
 
 function prompt() {
+    const readline = require('readline');
     return readline.createInterface({ input: process.stdin,  output: process.stdout});
 }
 
